@@ -62,11 +62,20 @@ class Customer
 
   def initialize
     @@total_customers += 1
+    @cart = []
     if @@total_customers == 1
     puts "#{@@total_customers} customer served"
     else
     puts "#{@@total_customers} customers served"
     end
+
+    def add_to_cart(product)
+      @product = product
+      @cart.push(product)
+
+    end  #local variable will be ended at the end of method
+
+
   end
 
 end
@@ -82,3 +91,10 @@ end
 
 VIPcustomer.new
 Customer.new
+
+local_variable = "I'm local"
+@instance_varaible = "I belong to an instance"
+@@class_variable = "I belong to the class"
+
+#Princible of Least Access
+# good to make your variables have the smallest scope possible
