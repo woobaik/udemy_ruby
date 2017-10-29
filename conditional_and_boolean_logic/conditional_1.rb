@@ -27,5 +27,5 @@ elsif x == y
     puts "#{x} is equal to #{y}."
 else
   puts "#{x} is less than #{y}"
- 
+
 end
