@@ -38,4 +38,5 @@ lead_des = LeadDesigner.new
 lead_eng.yelling
 lead_des.make_pretty
 
+#Methods in diguise 
 Kernel.puts("hello")
