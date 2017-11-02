@@ -1,0 +1,17 @@
+pwd => current working directory
+
+cd folder => go into folder
+
+cd .. => go up to a folder
+
+cd - => back to last folder
+
+ls => list folders and files
+
+ls -a => show all folders and files  include hidden files
+
+ls -R foldername => list everything in folder and show its subfolders
+
+cd ~ => go home folder
+
+cd ~/Downloads/ => navigate folder from home folder
