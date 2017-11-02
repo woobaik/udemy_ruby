@@ -38,3 +38,13 @@ mv (afolder) .   => bring (afolder) to current folder
 mv a.txt Quebec/Vancouver.txt => change and move the a.txt file to vancouver.txt
 
 rmdir => remove directory (only it is empty)
+
+rm filename => remove file name
+
+rm -R (directory) => remove directory with recursively delete files.
+
+cp -R => copy recursively
+
+cp (filename) (newfilename) => copy file into same folder
+
+touch => make a file (not going to work if file name already exists)
