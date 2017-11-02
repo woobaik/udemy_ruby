@@ -1,0 +1,5 @@
+added this through >>
+added this as well with >>
+
+'cat' prints out all contents
+you can use 'less' great for taking a peek at the beginning of a text file
