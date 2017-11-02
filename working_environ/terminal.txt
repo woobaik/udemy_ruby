@@ -15,3 +15,26 @@ ls -R foldername => list everything in folder and show its subfolders
 cd ~ => go home folder
 
 cd ~/Downloads/ => navigate folder from home folder
+
+mkdir Canada => Create a folder
+cd Canada => go into Canada Folder
+cd - => go back to last folder
+mkdir Canada/Quebec
+mkdir ./Canada    => "." refers the current folder address
+
+mkdir Alberta Manitoba Saskatchewan =>  make a multiple folders
+
+mkdir "British Columbia" => "" helps to make space in the folder name
+mkdir Northwest\ Territories => "\" also escapes the character
+
+mkdir Newfoundland\ And \Labradour
+
+rmdir New (Tab) => remove a folder that starts with New
+mv (previousname) (newname) => Change name
+mv (priviousfolder) (anotherfolder)  => bring priviousfolder into another folder
+
+mv (afolder) .   => bring (afolder) to current folder
+
+mv a.txt Quebec/Vancouver.txt => change and move the a.txt file to vancouver.txt
+
+rmdir => remove directory (only it is empty)
