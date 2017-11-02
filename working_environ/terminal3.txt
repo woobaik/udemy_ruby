@@ -1,0 +1,8 @@
+Create a link through terminal
+
+ln -s => projects/2016/Sep/my_project ~/proj
+=> make a link for my_project to newly created symbolic link
+(short cut?)
+
+if you want to know more about specific command , use man command
+ex)"man ln"
