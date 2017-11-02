@@ -1,0 +1,12 @@
+Absolute path vs Relative Path
+
+pwd
+
+ex)
+  ls Downloads -> relative path
+  ls /user/jbaik/Downloads => absolute => ~/Downloads  #working same..
+
+  ls . => "." is a current folder   =>relative
+  ls projects/2016  == ls ./projects/2016 => relative
+
+  
