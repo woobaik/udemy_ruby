@@ -19,7 +19,36 @@ attr_accessor :grid
     puts
   end
 
+  def row_win?(marker)
+    @grid.any? do |row|
+      row.all? do |cell|
+        cell == marker
+      end
+    end
+  end
+
+  def column_win?
+
+  end
+
+  def diagonal_win?
+
+  end
+
 end
 
-b = Board.new
-b.print_grid
+def print_and_check
+  @b.print_grid
+  p @b.row_win?(:O)
+  p @b.row_win?(:X)
+end
+
+@b = Board.new
+print_and_check
+@b.grid[0][0]=:O
+print_and_check
+
+@b.grid[0][1]=:O
+print_and_check
+@b.grid[0][2]=:O
+print_and_check
