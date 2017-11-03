@@ -27,8 +27,12 @@ attr_accessor :grid
     end
   end
 
-  def column_win?
-
+  def column_win?(marker)
+    (0...WIDTH).any? do |col|
+      @grid.all? do |row|
+        row[col] == marker
+      end
+    end
   end
 
   def diagonal_win?
