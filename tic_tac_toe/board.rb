@@ -28,6 +28,10 @@ attr_accessor :grid
     puts
   end
 
+  def winner?(marker)
+    row_win?(marker) || column_win?(marker) || diagonal_win?(marker)
+  end
+
   def row_win?(marker)
     @grid.any? do |row|
       row.all? do |cell|
