@@ -35,8 +35,14 @@ attr_accessor :grid
     end
   end
 
-  def diagonal_win?
-
+  def diagonal_win?(marker)
+    return true if (0...WIDTH).all? do |i|
+      @grid[i][i] == marker
+    end
+    return true if (0...WIDTH).all? do |i|
+      @grid[i][-(i+1)] == marker   #-(i+1) reflects the negative index
+    end
+    false
   end
 
 end
@@ -45,14 +51,18 @@ def print_and_check
   @b.print_grid
   p @b.row_win?(:O)
   p @b.row_win?(:X)
+  p @b.column_win?(:O)
+  p @b.column_win?(:X)
+  p @b.diagonal_win?(:X)
+  p @b.diagonal_win?(:O)
 end
 
 @b = Board.new
 print_and_check
-@b.grid[0][0]=:O
+@b.grid[2][0]=:O
 print_and_check
 
-@b.grid[0][1]=:O
+@b.grid[1][1]=:O
 print_and_check
 @b.grid[0][2]=:O
 print_and_check
