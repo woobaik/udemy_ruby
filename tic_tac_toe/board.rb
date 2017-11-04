@@ -9,8 +9,17 @@ attr_accessor :grid
     @grid = Array.new(HEIGHT) {Array.new(WIDTH,:" ")}
   end
 
+  def [](y,x)
+    @grid[y][x]
+  end
+
+  def []=(y,x,mark)
+    @grid[y][x] = mark
+
+  end
+
   def print_grid
-    grid.each do |row|
+    @grid.each do |row|
       puts ""
       row.each do |cell|
         print "[#{cell}]"
@@ -59,10 +68,9 @@ end
 
 @b = Board.new
 print_and_check
-@b.grid[2][0]=:O
+@b[0,2]=:O
 print_and_check
-
-@b.grid[1][1]=:O
+@b[1,1]=:O
 print_and_check
-@b.grid[0][2]=:O
+@b[0,2]=:O
 print_and_check
