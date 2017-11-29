@@ -3,7 +3,11 @@
 
 <ul>
 <% @tasks.each do |task| %>
-  <li><%= task %></li>
+  <li>
+    <strong><%= task.title %></strong>
+    <p><em><%= task.details %></em></p>
+    <p><%= link_to 'Edit', edit_task_path(task) %>
+  </li>
 <% end %>
 </ul>
 
