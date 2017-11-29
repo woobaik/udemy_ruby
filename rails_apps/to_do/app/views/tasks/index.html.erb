@@ -4,9 +4,11 @@
 <ul>
 <% @tasks.each do |task| %>
   <li>
-    <strong><%= task.title %></strong>
+    <strong><%= link_to task.title, task_path(task) %></strong>
     <p><em><%= task.details %></em></p>
-    <p><%= link_to 'Edit', edit_task_path(task) %>
+    <p><%= link_to 'Edit', edit_task_path(task) %></p>
+    <p><%= link_to 'Delete', task_path(task),
+                             method: :delete %></p>
   </li>
 <% end %>
 </ul>
