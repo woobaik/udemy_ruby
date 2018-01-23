@@ -21,13 +21,16 @@ class Board
   end
 
   def []=(y,x,something)
-    if @grid[y][x] != :" " && [:"X", :"O"].include?(something)
+    if @grid[y][x] == :" " && [:"X", :"O"].include?(something)
     @grid[y][x]= something
     else
       return false
     end
   end
 
+  def winner?(marker)
+    row_win?(marker) || col_win?(marker) || diag_win?(marker)
+  end
 
   def row_win?(marker)
     @grid.any? do |row|
