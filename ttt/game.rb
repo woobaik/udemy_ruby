@@ -8,5 +8,13 @@ class Game
     @players = players
   end
 
+  def take_turn(player)
+    move = player.get_move
+    @board[*move]= player.marker
+  end
+
+  def print_board
+    @board.print_grid
+  end
 
 end

@@ -22,7 +22,7 @@ class Board
 
   def []=(y,x,something)
     if @grid[y][x] == :" " && [:"X", :"O"].include?(something)
-    @grid[y][x]= something
+    @grid[y][x] = something
     else
       return false
     end
@@ -61,25 +61,25 @@ class Board
 end
 
 
-
-a = Board.new
-a[0,0] =:X
-a.print_grid
-p a.row_win?(:X)
-p a.col_win?(:X)
-p a.diag_win?(:X)
-puts
-
-a[1,1] =:X
-a.print_grid
-p a.row_win?(:X)
-p a.col_win?(:X)
-p a.diag_win?(:X)
-puts
-
-a[2,2] =:X
-a.print_grid
-p a.row_win?(:X)
-p a.col_win?(:X)
-p a.diag_win?(:X)
-puts
+#
+# a = Board.new
+# a[0,0] =:X
+# a.print_grid
+# p a.row_win?(:X)
+# p a.col_win?(:X)
+# p a.diag_win?(:X)
+# puts
+#
+# a[1,1] =:X
+# a.print_grid
+# p a.row_win?(:X)
+# p a.col_win?(:X)
+# p a.diag_win?(:X)
+# puts
+#
+# a[2,2] =:X
+# a.print_grid
+# p a.row_win?(:X)
+# p a.col_win?(:X)
+# p a.diag_win?(:X)
+# puts
