@@ -16,6 +16,19 @@ class Board
     puts
   end
 
+  def [](y,x)
+    @grid[y][x]
+  end
+
+  def []=(y,x,something)
+    if @grid[y][x] != :" " && [:"X", :"O"].include?(something)
+    @grid[y][x]= something
+    else
+      return false
+    end
+  end
+
+
   def row_win?(marker)
     @grid.any? do |row|
       row.all? do |cell|
@@ -44,22 +57,24 @@ class Board
   end
 end
 
+
+
 a = Board.new
-a.grid[0][0] =:X
+a[0,0] =:X
 a.print_grid
 p a.row_win?(:X)
 p a.col_win?(:X)
 p a.diag_win?(:X)
 puts
 
-a.grid[1][1] =:X
+a[1,1] =:X
 a.print_grid
 p a.row_win?(:X)
 p a.col_win?(:X)
 p a.diag_win?(:X)
 puts
 
-a.grid[2][2] =:X
+a[2,2] =:X
 a.print_grid
 p a.row_win?(:X)
 p a.col_win?(:X)
